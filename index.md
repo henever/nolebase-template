@@ -13,7 +13,7 @@ hero:
   actions:
     - theme: brand
       text: 开始阅读
-      link: /笔记/index
+      link: /Notes/index
 
     - theme: alt
       text: GitHub 上浏览
