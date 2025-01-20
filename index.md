@@ -4,9 +4,9 @@ sidebar: false
 title: Trix2been's Blog
 titleTemplate: 记录回忆，知识和畅想的地方
 hero:
-  name: g~Nj$3J2^
+  name: Trix2been's Blog
   text: 记录回忆，知识和畅想的地方
-  tagline: 个人随笔，未完待续$\cdots$
+  tagline: 个人随笔，未完待续
   image:
     src: /logo.svg
     alt: Vitest
