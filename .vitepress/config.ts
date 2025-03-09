@@ -13,6 +13,8 @@ import { creatorNames, creatorUsernames } from './creators'
 import { sidebar } from './docsMetadata.json'
 
 export default defineConfig({
+  srcDir: '.', // 重要！指定源文件目录为根目录
+  outDir: './dist',
   vue: {
     template: {
       transformAssetUrls: {
@@ -209,7 +211,7 @@ export default defineConfig({
     },
     nav: [
       { text: '主页', link: '/' },
-      { text: '笔记', link: '/笔记/' },
+      { text: '笔记', link: '/Notes/index' },
       { text: '最近更新', link: '/toc' },
     ],
     sidebar,
@@ -242,4 +244,27 @@ export default defineConfig({
       },
     })(siteConfig)
   },
+  buildEnd: async () => {
+    const { execa } = await import('execa')
+    try {
+      await execa('node', ['scripts/generate-articles.mjs'], {
+        stdio: 'inherit',
+        preferLocal: true
+      })
+    } catch (e) {
+      console.error('构建文章列表失败:', e)
+      process.exit(1)
+    }
+  },
+
+  vite: {
+    optimizeDeps: {
+      exclude: ['gray-matter'] // 确保Vite不处理这个依赖
+    },
+    resolve: {
+      alias: {
+        '@theme': '/.vitepress/theme'
+      }
+    }
+  }
 })

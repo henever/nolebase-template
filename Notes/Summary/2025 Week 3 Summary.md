@@ -1,5 +1,7 @@
 ---
 comments: true
+title: 25week3_summary
+date: 2025-01-19
 tags:
   - Summary
 ---

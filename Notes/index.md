@@ -1,3 +1,10 @@
-## MyBlog
-笔者初次撰写类似的文字博客，若有不到之处还望海涵。
-祝大家学习、工作顺利。
+<!-- Notes/index.md -->
+
+<script setup>
+// 从相对路径改为绝对路径引用
+import ArticlesList from '/.vitepress/theme/ArticlesList.vue'
+</script>
+
+# 全部知识条目
+
+<ArticlesList />

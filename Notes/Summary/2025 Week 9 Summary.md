@@ -1,5 +1,7 @@
 ---
 comment: true
+title: 25week9_summary
+date: 2025-03-02
 tags:
   - Summary
 ---
@@ -16,5 +18,5 @@ Completed:
 
 To be completed:
 - [ ] CS61A Scheme, SQL, Database
-- [ ] 《理想国》 作业论文
+- [ ]  作业论文
 - [ ] 拉普拉斯妖与麦克斯韦兽 作业论文

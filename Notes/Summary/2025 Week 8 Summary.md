@@ -1,5 +1,7 @@
 ---
 comment: true
+title: 25week8_summary
+date: 2025-02-23
 tags:
   - Summary
 ---
