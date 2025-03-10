@@ -5,5 +5,8 @@
       "use": "@vercel/static-build",
       "config": { "distDir": "dist" }
     }
-  ]
+  ],
+  "env": {
+    "NPM_CONFIG_REGISTRY": "https://registry.npmjs.org/"
+  }
 }
