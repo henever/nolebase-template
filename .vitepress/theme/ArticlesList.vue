@@ -16,7 +16,7 @@ const TAG_COLORS = {
 const loadArticles = async () => {
   try {
     const base = import.meta.env.BASE_URL
-    const res = await fetch(`./.vitepress/public/articles.json`)
+    const res = await fetch(`/articles.json`)
     if (!res.ok) throw new Error(`加载失败，状态码: ${res.status}`)
     articles.value = await res.json()
     error.value = null
