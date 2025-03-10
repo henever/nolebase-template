@@ -14,7 +14,7 @@ import { sidebar } from './docsMetadata.json'
 
 export default defineConfig({
   srcDir: '.', // 重要！指定源文件目录为根目录
-  outDir: '../dist',
+  outDir: './dist',
   vue: {
     template: {
       transformAssetUrls: {
