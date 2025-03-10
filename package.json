@@ -19,7 +19,7 @@
   ],
   "scripts": {
     "dev": "pnpm run docs:dev",
-    "build": "vitepress build && rm -rf dist && cp -r .vitepress/dist ./dist",
+    "build": "pnpm run docs:build && cp -r .vitepress/dist ./dist",
     "serve": "pnpm run docs:serve",
     "docs:dev": "pnpm run update && vitepress dev",
     "docs:build": "pnpm run update && vitepress build",
