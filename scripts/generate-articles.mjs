@@ -83,7 +83,7 @@ async function main() {
       new Date(b.date) - new Date(a.date)
     )
     
-    const outputPath = path.join(__dirname, '../.vitepress/public/articles.json')
+    const outputPath = path.join(__dirname, '../dist/articles.json')
     
     // 新增：自动创建目录
     const outputDir = path.dirname(outputPath)

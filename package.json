@@ -19,7 +19,7 @@
   ],
   "scripts": {
     "dev": "pnpm run docs:dev",
-    "build": "pnpm run docs:build && cp -r ./dist .vitepress/dist && cp articles.json .vitepress/public/",
+    "build": "pnpm run docs:build --out-dir .vitepress/dist && cp articles.json .vitepress/dist/ && echo '验证构建结果：' && ls -la .vitepress/dist",
     "serve": "pnpm run docs:serve",
     "docs:dev": "pnpm run update && vitepress dev",
     "docs:build": "pnpm run update && vitepress build",
@@ -71,13 +71,15 @@
     "unocss": "^0.58.9",
     "unplugin-vue-components": "^0.26.0",
     "uuid": "^9.0.1",
-    "vite": "^5.2.8",
+    "vite": "^6.2.1",
     "vite-plugin-inspect": "^0.8.3",
     "vitepress": "^1.0.2",
     "vitepress-plugin-comment-with-giscus": "^1.1.15",
     "vue": "^3.4.21"
   },
   "dependencies": {
-    "execa": "^9.5.2"
+    "execa": "^9.5.2",
+    "node": "^23.9.0",
+    "vercel": "^41.3.2"
   }
 }
