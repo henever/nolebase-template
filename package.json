@@ -19,7 +19,7 @@
   ],
   "scripts": {
     "dev": "pnpm run docs:dev",
-    "build": "pnpm run docs:build --out-dir .vitepress/dist",
+    "build": "pnpm run docs:build && cp -r ./dist .vitepress/dist",
     "serve": "pnpm run docs:serve",
     "docs:dev": "pnpm run update && vitepress dev",
     "docs:build": "pnpm run update && vitepress build",
@@ -79,7 +79,6 @@
   },
   "dependencies": {
     "execa": "^9.5.2",
-    "node": "^23.9.0",
     "vercel": "^41.3.2"
   }
 }
